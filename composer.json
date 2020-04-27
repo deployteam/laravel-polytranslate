@@ -25,7 +25,10 @@
     "laravel": {
       "providers": [
         "DeployTeam\\PolyTranslate\\ServiceProvider"
-      ]
+      ],
+      "aliases": {
+        "PolyTranslate": "DeployTeam\\PolyTranslate\\Facade"
+      }
     }
   }
 }
