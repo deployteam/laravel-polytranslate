@@ -3,6 +3,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE)
 [![Total Downloads][ico-downloads]][link-downloads]
+[![Build Status][ico-actions]][link-actions]
 
 ### Install
 Require this package with composer using the following command:
@@ -75,6 +76,8 @@ The Laravel PolyTranslate is open-sourced software licensed under the [MIT licen
 [ico-version]: https://img.shields.io/packagist/v/deployteam/laravel-polytranslate.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/deployteam/laravel-polytranslate.svg?style=flat-square
+[ico-actions]: https://github.com/deployteam/laravel-polytranslate/workflows/Build/badge.svg
 
 [link-packagist]: https://packagist.org/packages/deployteam/laravel-polytranslate
 [link-downloads]: https://packagist.org/packages/deployteam/laravel-polytranslate
+[link-actions]: https://github.com/deployteam/laravel-polytranslate/actions?query=workflow%3ABuild
