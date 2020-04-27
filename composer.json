@@ -22,5 +22,10 @@
     "laravel/framework": "~7.0"
   },
   "extra": {
+    "laravel": {
+      "providers": [
+        "DeployTeam\\PolyTranslate\\PolytranslateServiceProvider"
+      ]
+    }
   }
 }
