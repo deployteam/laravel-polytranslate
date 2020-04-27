@@ -7,7 +7,7 @@ namespace DeployTeam\PolyTranslate;
 use DeployTeam\PolyTranslate\Translation\FileLoader;
 use Illuminate\Translation\TranslationServiceProvider;
 
-class PolytranslateServiceProvider extends TranslationServiceProvider
+class ServiceProvider extends TranslationServiceProvider
 {
     /**
      * Register the translation line loader.
