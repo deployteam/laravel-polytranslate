@@ -8,6 +8,55 @@ use Illuminate\Translation\FileLoader as Loader;
 class FileLoader extends Loader
 {
     /**
+     * The paths for the loader.
+     *
+     * @var array
+     */
+    protected $paths = [];
+
+    /**
+     * Load the messages for the given locale.
+     *
+     * @param  string  $locale
+     * @param  string  $group
+     * @param  string|null  $namespace
+     * @return array
+     */
+    public function load($locale, $group, $namespace = null)
+    {
+        if ($group === '*' && $namespace === '*') {
+            return $this->loadJsonPaths($locale);
+        }
+
+        if (is_null($namespace) || $namespace === '*') {
+            return $this->loadPaths($locale, $group);
+        }
+
+        return $this->loadNamespaced($locale, $group, $namespace);
+    }
+
+    /**
+     * Load a locale from a given path.
+     *
+     * @param  string  $path
+     * @param  string  $locale
+     * @param  string  $group
+     * @return array
+     */
+    private function loadPaths($locale, $group)
+    {
+        $messages = [];
+
+        $messages[] = $this->loadPath($this->path, $locale, $group);
+
+        foreach($this->paths as $path) {
+            $messages[] = $this->loadPath($path, $locale, $group);
+        }
+
+        return array_merge([], ...$messages);
+    }
+
+    /**
      * Load a namespaced translation group.
      *
      * @param  string  $locale
@@ -48,5 +97,13 @@ class FileLoader extends Loader
         }
 
         $this->hints[$namespace][] = $hint;
+    }
+
+    /**
+     * @param string $path
+     */
+    public function addPath($path)
+    {
+        $this->paths[] = $path;
     }
 }
