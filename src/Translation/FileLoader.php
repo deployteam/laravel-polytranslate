@@ -73,9 +73,12 @@ class FileLoader extends Loader
                 $trans = $this->loadPath($path, $locale, $group);
 
                 if (is_array($trans)) {
-                    $lines = array_merge($lines, $trans);
+                    $lines[] = $trans;
                 }
             }
+
+            // Merge lines
+            $lines = array_merge([], ...$lines);
 
             return $this->loadNamespaceOverrides($lines, $locale, $group, $namespace);
         }
