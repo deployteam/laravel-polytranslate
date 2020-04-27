@@ -1,0 +1,26 @@
+{
+  "name": "deployteam/laravel-polytranslate",
+  "description": "Add multiple locations for Laravel localization namespace",
+  "homepage": "http://deploy.com.ro",
+  "keywords": ["laravel"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alex Hampu",
+      "email": "alex.hampu@deploy.com.ro"
+    }
+  ],
+  "autoload" : {
+    "psr-4" : {
+      "DeployTeam\\PolyTranslate\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "laravel/framework": "~7.0"
+  },
+  "extra": {
+  }
+}
