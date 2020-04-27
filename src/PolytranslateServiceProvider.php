@@ -1,13 +1,13 @@
 <?php
 
 
-namespace DeployTeam\PolyTranslate\Providers;
+namespace DeployTeam\PolyTranslate;
 
 
 use DeployTeam\PolyTranslate\Translation\FileLoader;
-use Illuminate\Translation\TranslationServiceProvider as Provider;
+use Illuminate\Translation\TranslationServiceProvider;
 
-class TranslationServiceProvider extends Provider
+class PolytranslateServiceProvider extends TranslationServiceProvider
 {
     /**
      * Register the translation line loader.
