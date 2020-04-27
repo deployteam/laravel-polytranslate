@@ -15,11 +15,17 @@
       "DeployTeam\\PolyTranslate\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "DeployTeam\\PolyTranslate\\Test\\": "tests"
+    }
+  },
   "require": {
     "php": ">=7.1"
   },
   "require-dev": {
-    "laravel/framework": "~7.0"
+    "laravel/framework": "~7.0",
+    "orchestra/testbench": "^5.1"
   },
   "extra": {
     "laravel": {
