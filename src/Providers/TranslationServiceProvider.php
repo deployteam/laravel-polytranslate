@@ -4,7 +4,7 @@
 namespace DeployTeam\PolyTranslate\Providers;
 
 
-use App\Translation\FileLoader;
+use DeployTeam\PolyTranslate\Translation\FileLoader;
 use Illuminate\Translation\TranslationServiceProvider as Provider;
 
 class TranslationServiceProvider extends Provider
