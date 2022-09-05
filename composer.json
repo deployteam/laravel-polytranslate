@@ -39,5 +39,15 @@
         "PolyTranslate": "DeployTeam\\PolyTranslate\\Facade"
       }
     }
-  }
+  },
+  "funding": [
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/deployteam"
+    },
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/alexhampu"
+    }
+  ]
 }
